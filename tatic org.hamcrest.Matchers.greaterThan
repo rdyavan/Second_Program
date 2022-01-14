@@ -1,0 +1,27 @@
+[1mdiff --git a/.vs/Second_Program/v17/.suo b/.vs/Second_Program/v17/.suo[m
+[1mindex 7e98cda..236d113 100644[m
+Binary files a/.vs/Second_Program/v17/.suo and b/.vs/Second_Program/v17/.suo differ
+[1mdiff --git a/.vs/slnx.sqlite b/.vs/slnx.sqlite[m
+[1mindex 8b40916..200ab12 100644[m
+Binary files a/.vs/slnx.sqlite and b/.vs/slnx.sqlite differ
+[1mdiff --git a/src/test/java/com/example/TestGreeter.java b/src/test/java/com/example/TestGreeter.java[m
+[1mindex e7f120c..1d7b375 100644[m
+[1m--- a/src/test/java/com/example/TestGreeter.java[m
+[1m+++ b/src/test/java/com/example/TestGreeter.java[m
+[36m@@ -5,6 +5,7 @@[m [mimport org.junit.Test;[m
+ [m
+ import static org.hamcrest.CoreMatchers.is;[m
+ import static org.hamcrest.Matchers.greaterThan;[m
+[32m+[m[32mimport static org.hamcrest.Matchers.lessThan;[m
+ import static org.junit.Assert.assertThat;[m
+ import static org.junit.matchers.JUnitMatchers.containsString;[m
+ [m
+[36m@@ -41,7 +42,7 @@[m [mpublic class TestGreeter {[m
+   public void greetShouldIncludeGreetingSMS() {[m
+     String someone = "World, Thanks you making me Happy";[m
+ [m
+[31m-    assertThat(greeter.greet(someone).length(), is(greaterThan(someone.length())));[m
+[32m+[m[32m    assertThat(greeter.greet(someone).length(), is(lessThan(someone.length())));[m
+   }[m
+ [m
+ }[m
